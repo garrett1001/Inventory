@@ -5,6 +5,7 @@
 using std::string;
 using std::ostream;
 
+//initializes an Inventory
 Inventory::Inventory(string name, float price, int count)
 {
   m_name = name;
@@ -12,6 +13,7 @@ Inventory::Inventory(string name, float price, int count)
   m_in_stock = count;
 }
 
+//Sell a item if stock is avalible
 bool Inventory::sell()
 {
   if(m_in_stock > 0){
@@ -22,6 +24,7 @@ bool Inventory::sell()
   }//else
 }
 
+//Operater to stream the item name and cost
 ostream& operator<<(ostream& stream, const Inventory& item)
 {
   stream << item.m_name

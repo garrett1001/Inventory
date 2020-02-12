@@ -5,6 +5,7 @@
 using std::string;
 using std::ostream;
 
+//Class for tracking an inventory for sales
 class Inventory
 {
   private:
