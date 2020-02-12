@@ -16,12 +16,11 @@ int main()
     cin>>choice;
     if( choice == 'S' || choice == 's' )
     {
-      stock.sell();
-      cout<<stock<<"\n";
-    }
-    else if( choice != 'q' && choice != 'Q' )
-    {
-      cout<<"Please enter S or Q\n";
+      if(stock.sell()){
+        cout<<stock<<"\n";
+      }else{
+        cout<<"Sorry, that item is out of stock"<<"\n";
+      }
     }
   }while( choice != 'q' && choice != 'Q');
 
